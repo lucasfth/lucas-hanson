@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.theme-switch input:checked + label {
+  background-color: white;
+}
+
+.theme-switch label::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2.5px;
+  bottom: 2.5px;
+  background-color: white;
+  background-size: 70%;
+  background-image: url("./assets/sun.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .4s;
+  border-radius: 50%;
+  transform: translateX(15px);
+  transition: 1.5s;
+  animation: roll-out 1.5s forwards;
+}
+
+.theme-switch input:checked + label::before {
+  background-color: #333;
+  background-size: 70%;
+  background-image: url("./assets/moon.png");
+}
+
+.theme-switch input:checked + label::before {
+  transform: translateX(0px);
+  transition: 1.5s;
+  animation: roll-in 1.5s forwards;
+}
+
+@keyframes roll-out {
+  from { transform: translateX(0) rotate(-180deg); }
+  to { transform: translateX(15) rotate(-360deg); }
+}
+
+@keyframes roll-in {
+  from { transform: translateX(15px) rotate(180deg); }
+  to { transform: translateX(0px) rotate(360); }
+}
