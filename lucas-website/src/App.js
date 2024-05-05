@@ -12,37 +12,37 @@ import logo_dark from './assets/logo_dark.png';
 export const ThemeContext = createContext();
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+    localStorage.setItem('theme', newTheme);
   }
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-      <div className="App">
-        <Navbar data-bs-theme={theme} expand="lg" className="bg-body-tertiary d-flex align-items-center">
+      <div className='App'>
+        <Navbar data-bs-theme={theme} expand='lg' className='d-flex align-items-center' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(229,235,239,0.1)' : 'rgba(0.3,0.3,0.3,0.1)', backdropFilter: 'blur(5px)'}}>
           <Container fluid>
-            <Navbar.Brand href="#home" className="mx-auto"><Image src={theme === "light" ? logo_light : logo_dark} fluid style={{height: "30px" }} rounded alt="Website logo"/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none order-first" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home" aria-label="About me">About me</Nav.Link>
-                <Nav.Link href="#link" aria-label="Projects">Projects</Nav.Link>
+            <Navbar.Brand href='#home' className='mx-auto'><Image src={theme === 'light' ? logo_light : logo_dark} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
+            <Navbar.Collapse id='basic-navbar-nav'>
+              <Nav className='me-auto'>
+                <Nav.Link href='#home' aria-label='About me'>About me</Nav.Link>
+                <Nav.Link href='#link' aria-label='Projects'>Projects</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
-          <div className={`theme-switch`} style={{ position: 'absolute', top: '50%', right: '15px', transform: 'translateY(-50%)' }}>
+          <div className={'theme-switch'} style={{ position: 'absolute', top: '50%', right: '15px', transform: 'translateY(-50%)' }}>
             <input
               onChange={toggleTheme} 
               checked={theme === 'dark'}
-              type="checkbox"
-              id="custom-switch"
+              type='checkbox'
+              id='custom-switch'
               aria-checked={theme === 'dark'}
             />
-            <label htmlFor="custom-switch"></label>
+            <label htmlFor='custom-switch'></label>
           </div>
         </Navbar>
         <Hello />

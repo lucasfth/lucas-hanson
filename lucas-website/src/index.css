@@ -3,6 +3,13 @@
   --light-bg: #e5ebf0;
   --dark-text: #FFF;
   --light-text: #333;
+  --bezier: cubic-bezier(0,.7,.3,1);
+  --background-sizing: 80%;
+  --transition-animation-time: 0.2s;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -12,6 +19,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.grain {
+  background-image: url('./assets/grain.svg');
+  background-size: cover;
+  opacity: 0.09;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
 }
 
 code {
@@ -57,52 +78,52 @@ p, h1, h2 {
   right: 0;
   bottom: 0;
   background-color: var(--light-text);
-  transition: 1s;
+  transition: var(--transition-animation-time);
   border-radius: 34px;
 }
 
 .theme-switch input:checked + label {
   background-color: var(--light-bg);
-  transition: 1s;
+  transition: var(--transition-animation-time);
 }
 
 .theme-switch label::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 20px;
   width: 20px;
   left: 2.5px;
   bottom: 2.5px;
   background-color: var(--light-bg);
-  background-size: 70%;
-  background-image: url("./assets/sun.png");
+  background-size: var(--background-sizing);
+  background-image: url('./assets/sun.png');
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
   transform: translateX(15px);
-  transition: 1.5s;
-  animation: roll-out 1s forwards cubic-bezier(.74,.53,.87,1.23);
+  transition: var(--transition-animation-time);
+  animation: roll-out var(--transition-animation-time) forwards var(--bezier);
 }
 
 .theme-switch input:checked + label::before {
   background-color: var(--dark-bg);
-  background-size: 70%;
-  background-image: url("./assets/moon.png");
+  background-size: var(--background-sizing);
+  background-image: url('./assets/moon.png');
 }
 
 .theme-switch input:checked + label::before {
   transform: translateX(0px);
-  transition: 1s;
-  animation: roll-in 1s forwards cubic-bezier(.74,.53,.87,1.23);
+  transition: var(--transition-animation-time);
+  animation: roll-in var(--transition-animation-time) forwards var(--bezier);
 }
 
 @keyframes roll-out {
-  from { transform: translateX(0) rotate(-90deg); }
+  from { transform: translateX(0) rotate(-180deg); }
   to { transform: translateX(15) rotate(0deg); }
 }
 
 @keyframes roll-in {
-  from { transform: translateX(15px) rotate(90deg); }
+  from { transform: translateX(15px) rotate(180deg); }
   to { transform: translateX(0px) rotate(0); }
 }
 
