@@ -10,4 +10,4 @@
 ## How to deploy the project
 
 1. `cd` into the folder `lucas-website`
-2. Run `npm run build`
+2. Run `npm run deploy`
