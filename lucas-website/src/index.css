@@ -1,3 +1,10 @@
+:root {
+  --dark-bg: #464b51;
+  --light-bg: #e5ebf0;
+  --dark-text: #FFF;
+  --light-text: #333;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,6 +19,23 @@ code {
     monospace;
 }
 
+p, h1, h2 {
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* THEME SWITHC */
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -32,13 +56,14 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333;
-  transition: .4s;
+  background-color: var(--light-text);
+  transition: 1s;
   border-radius: 34px;
 }
 
 .theme-switch input:checked + label {
-  background-color: white;
+  background-color: var(--light-bg);
+  transition: 1s;
 }
 
 .theme-switch label::before {
@@ -48,36 +73,64 @@ code {
   width: 20px;
   left: 2.5px;
   bottom: 2.5px;
-  background-color: white;
+  background-color: var(--light-bg);
   background-size: 70%;
   background-image: url("./assets/sun.png");
   background-repeat: no-repeat;
   background-position: center;
-  transition: .4s;
   border-radius: 50%;
   transform: translateX(15px);
   transition: 1.5s;
-  animation: roll-out 1.5s forwards;
+  animation: roll-out 1s forwards cubic-bezier(.74,.53,.87,1.23);
 }
 
 .theme-switch input:checked + label::before {
-  background-color: #333;
+  background-color: var(--dark-bg);
   background-size: 70%;
   background-image: url("./assets/moon.png");
 }
 
 .theme-switch input:checked + label::before {
   transform: translateX(0px);
-  transition: 1.5s;
-  animation: roll-in 1.5s forwards;
+  transition: 1s;
+  animation: roll-in 1s forwards cubic-bezier(.74,.53,.87,1.23);
 }
 
 @keyframes roll-out {
-  from { transform: translateX(0) rotate(-180deg); }
-  to { transform: translateX(15) rotate(-360deg); }
+  from { transform: translateX(0) rotate(-90deg); }
+  to { transform: translateX(15) rotate(0deg); }
 }
 
 @keyframes roll-in {
-  from { transform: translateX(15px) rotate(180deg); }
-  to { transform: translateX(0px) rotate(360); }
+  from { transform: translateX(15px) rotate(90deg); }
+  to { transform: translateX(0px) rotate(0); }
+}
+
+/* PADDING FROM NAVBAR */
+.container-padding {
+  padding-top: 5em;
+}
+
+@media (max-width: 1200px) {
+  .container-padding {
+    padding-top: 4em;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-padding {
+    padding-top: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-padding {
+    padding-top: 2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-padding {
+    padding-top: 1em;
+  }
 }
