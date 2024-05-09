@@ -3,11 +3,11 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useContext, useEffect, useRef } from 'react';
-import { ThemeContext } from './App';
+import { ThemeContext } from '../App';
 import lucas_full_body from './assets/lucas_full_body.jpg';
 import Alert from 'react-bootstrap/Alert';
 
-function Hello() {
+function Intro() {
   const { theme } = useContext(ThemeContext);
   const imageRef = useRef();
 
@@ -22,7 +22,7 @@ function Hello() {
         ((window.innerWidth / 2 - clientX) / window.innerWidth) * 10;
       const moveY =
         ((window.innerHeight / 2 - clientY) / window.innerHeight) * 10;
-      imageRef.current.style.transform = `scale(0.99) translate(${moveX}px, ${moveY}px)`;
+      imageRef.current.style.transform = `scale(0.98) translate(${moveX}px, ${moveY}px)`;
     };
 
     const handleMouseLeave = () => {
@@ -52,7 +52,7 @@ function Hello() {
         profile.
       </Alert>
       <Row>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={3} style={{padding: '1em'}}>
           <Image
             ref={imageRef}
             src={lucas_full_body}
@@ -61,7 +61,7 @@ function Hello() {
             alt='Picture of Lucas Hanson'
           />
         </Col>
-        <Col xs={12} md={9}>
+        <Col xs={12} md={9} style={{padding: '1em'}}>
           <h1>Hello, I&apos;m Lucas</h1>
           <p>
             As a sixth-semester student of Software Development at the
@@ -105,4 +105,4 @@ function Hello() {
   );
 }
 
-export default Hello;
+export default Intro;

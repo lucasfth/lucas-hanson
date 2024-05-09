@@ -3,11 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './App.css';
-import { createContext, useState } from 'react';
-import Hello from './Hello';
+import { useState, createContext } from 'react';
+import Intro from './intro/Intro';
 import Image from 'react-bootstrap/Image';
-import logo_light from './assets/logo_light.png';
-import logo_dark from './assets/logo_dark.png';
+import logo from './assets/logo.png';
+
+import ThemeSwitch from './components/ThemeSwitch';
 
 export const ThemeContext = createContext();
 
@@ -15,39 +16,30 @@ function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   }
-
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-      <div className='App'>
-        <Navbar data-bs-theme={theme} expand='lg' className='d-flex align-items-center' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(229,235,239,0.1)' : 'rgba(0.3,0.3,0.3,0.1)', backdropFilter: 'blur(5px)'}}>
-          <Container fluid>
-            <Navbar.Brand href='#home' className='mx-auto'><Image src={theme === 'light' ? logo_light : logo_dark} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
-            <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav className='me-auto'>
-                <Nav.Link href='#home' aria-label='About me'>About me</Nav.Link>
-                <Nav.Link href='#link' aria-label='Projects'>Projects</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-          <div className={'theme-switch'} style={{ position: 'absolute', top: '50%', right: '15px', transform: 'translateY(-50%)' }}>
-            <input
-              onChange={toggleTheme} 
-              checked={theme === 'dark'}
-              type='checkbox'
-              id='custom-switch'
-              aria-checked={theme === 'dark'}
-            />
-            <label htmlFor='custom-switch'></label>
-          </div>
-        </Navbar>
-        <Hello />
-      </div>
-    </ThemeContext.Provider>
+      <ThemeContext.Provider value={{theme, toggleTheme}}>
+        <div className='App'>
+          <Navbar data-bs-theme={theme} expand='lg' className='d-flex' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(250,250,250,0.5)' : 'rgba(0.3,0.3,0.3,0.5)', backdropFilter: 'blur(5px)'}}>
+            <Container fluid>
+              <Navbar.Brand href='#home' className='custom-navbar-brand'><Image src={logo} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
+              <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
+              <Navbar.Collapse id='basic-navbar-nav'>
+                <Nav className='me-auto'>
+                  <Nav.Link href='#home' className='custom-nav-link' aria-label='About me'>About me</Nav.Link>
+                  <Nav.Link href='#link' className='custom-nav-link' aria-label='Projects'>Projects</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+            <ThemeSwitch />
+          </Navbar>
+          <Intro />
+
+        </div>
+      </ThemeContext.Provider>
   );
 }
 
