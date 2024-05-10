@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useContext, useEffect, useRef } from 'react';
-import { ThemeContext } from '../App';
+import { ThemeContext, NavbarHeightContext } from '../App';
 import lucas_full_body from './assets/lucas_full_body.jpg';
 import Alert from 'react-bootstrap/Alert';
 
@@ -41,8 +41,10 @@ function Intro() {
     };
   }, []);
 
+  const navbarHeight = useContext(NavbarHeightContext);
+
   return (
-    <Container className='container-padding' style={{ textAlign: 'left' }}>
+    <Container style={{ textAlign: 'left', paddingTop: `${navbarHeight}px` }}>
       <Alert variant='info'>
         This website is a work in progress. It is built using React, React
         Bootstrap, and Bootstrap. Until then please visit my{' '}
@@ -52,7 +54,7 @@ function Intro() {
         profile.
       </Alert>
       <Row>
-        <Col xs={12} md={3} style={{padding: '1em'}}>
+        <Col xs={12} md={3}>
           <Image
             ref={imageRef}
             src={lucas_full_body}
@@ -61,18 +63,16 @@ function Intro() {
             alt='Picture of Lucas Hanson'
           />
         </Col>
-        <Col xs={12} md={9} style={{padding: '1em'}}>
+        <Col xs={12} md={9}>
           <h1>Hello, I&apos;m Lucas</h1>
           <p>
             As a sixth-semester student of Software Development at the
             IT-University of Copenhagen, I have hands-on experience in web
             development, databases, and algorithms. I have gained a strong
             foundation in the following programming languages:
-            <ul>
               <li>Java</li>
               <li>C#</li>
               <li>Golang</li>
-            </ul>
             My coursework has honed my problem-solving skills and solidified my
             passion for technology. My helpful and enterprising nature, with
             solid communication skills, make me a valuable addition to any team.
@@ -81,11 +81,10 @@ function Intro() {
             student-run Café called Analog. After volunteering as a barista and
             former vice-chair, I may have become somewhat addicted to coffee,
             and it is therefore essential to my coding routine ☕️
-            <br />I am currently learning:
-            <ul>
+            <br />
+            I am currently learning:
               <li>Reflections on IT 🤔</li>
               <li>Introduction to Artificial Intelligence 🤖</li>
-            </ul>
             Additionally, I am working on my bachelor project titled
             &apos;Hand-Gesture-Based Interaction in Hybrid Meetings.&apos;
             <br />

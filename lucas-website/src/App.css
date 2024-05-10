@@ -17,12 +17,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,15 +30,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .grain {
@@ -68,12 +53,7 @@ code {
 
 p, h1, h2 {
   text-align: justify;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.card-subtitle {
-  text-align: justify;
+  hyphens: auto;
 }
 
 .light {
@@ -86,92 +66,8 @@ p, h1, h2 {
   color: var(--dark-text);
 }
 
-.light .card {
-  background-color: var(--light-bg);
-}
-
-.dark .card {
-  background-color: var(--dark-bg);
-}
-
-.light .card-title, .light .card-subtitle, .light .card-text {
-  color: var(--light-text);
-}
-
-.dark .card-title, .dark .card-subtitle, .dark .card-text {
-  color: var(--dark-text);
-}
-
-/* THEME SWITHC */
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 25px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch label {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--light-text);
-  border-radius: 34px;
-}
-
-.theme-switch input:checked + label {
-  background-color: var(--light-bg);
-}
-
-.theme-switch label::before {
-  position: absolute;
-  content: '';
-  height: 20px;
-  width: 20px;
-  left: 2.5px;
-  bottom: 2.5px;
-  background-color: var(--light-bg);
-  background-size: var(--background-sizing);
-  background-image: url('./assets/sun.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  transform: translateX(15px);
-  animation: roll-out var(--animation-time) forwards var(--bezier);
-}
-
-.theme-switch input:checked + label::before {
-  background-color: var(--dark-bg);
-  background-size: var(--background-sizing);
-  background-image: url('./assets/moon.png');
-}
-
-.theme-switch input:checked + label::before {
-  transform: translateX(0px);
-  animation: roll-in var(--animation-time) forwards var(--bezier);
-}
-
-@keyframes roll-out {
-  from { transform: translateX(0) rotate(-180deg); }
-  to { transform: translateX(15) rotate(0deg); }
-}
-
-@keyframes roll-in {
-  from { transform: translateX(15px) rotate(180deg); }
-  to { transform: translateX(0px) rotate(0); }
-}
-
-/* PADDING FROM NAVBAR */
-.container-padding {
-  padding-top: 5em;
+.col {
+  padding: 1em;
 }
 
 @media (max-width: 1200px) {

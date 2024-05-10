@@ -1,0 +1,21 @@
+.light .card {
+    background-color: transparent;
+    border: 2px solid var(--dark-bg);
+  }
+  
+  .dark .card {
+    background-color: transparent;
+    border: 2px solid var(--light-bg);
+  }
+  
+  .light .card-title, .light .card-subtitle, .light .card-text {
+    color: var(--light-text);
+  }
+  
+  .dark .card-title, .dark .card-subtitle, .dark .card-text {
+    color: var(--dark-text);
+  }
+
+  .card-text {
+    text-align: justify;
+  }
