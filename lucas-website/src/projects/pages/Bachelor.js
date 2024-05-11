@@ -1,4 +1,4 @@
-import bachelorImg from './assets/bachelor.jpg';
+import bachelorImg from './assets/bachelor_frontpage.png';
 import Project from '../Project';
 
 export const bachelorData = {

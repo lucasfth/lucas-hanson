@@ -1,15 +1,20 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { useParams } from 'react-router-dom';
 import { bachelorData } from './Bachelor';
+import { dhiData } from './DHI';
 import { useContext, useEffect } from 'react';
 import { ThemeContext, NavbarHeightContext } from '../../App';
+import Image from 'react-bootstrap/Image';
 
 const projectDataMap = {
     'Bachelor': bachelorData,
+    'DHI': dhiData
 };
 
 function Page() {
+    
     const navbarHeight = useContext(NavbarHeightContext);
 
     const { theme } = useContext(ThemeContext);
@@ -30,10 +35,19 @@ function Page() {
     return (
         <Container style={{ textAlign: "left", paddingTop: `${navbarHeight}px` }}>
             <Row>
-                <img src={imgpath} alt={imgdesc} />
-                <h1>{title}</h1>
-                <h2>{subtitle}</h2>
-                <div dangerouslySetInnerHTML={{__html: content}} />
+                <Col xs={12} md={3}>
+                    <Image 
+                        src={imgpath} 
+                        alt={imgdesc}
+                        fluid
+                        rounded
+                    />
+                </Col>
+                <Col xs={12} md={9}>
+                    <h1>{title}</h1>
+                    <h2>{subtitle}</h2>
+                    <div dangerouslySetInnerHTML={{__html: content}} />
+                </Col>
             </Row>
         </Container>
     )
