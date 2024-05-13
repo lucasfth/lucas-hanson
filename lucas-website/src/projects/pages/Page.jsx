@@ -1,6 +1,4 @@
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { useParams } from 'react-router-dom';
 import { bachelorData } from './Bachelor';
 import { dhiData } from './DHI';
@@ -35,25 +33,26 @@ function Page() {
 
     return (
         <Container style={{ textAlign: "left", paddingTop: `${navbarHeight}px` }}>
-            <Row>
-                <Col xs={12} md={3}>
-                    <a href={imgref} target='_blank' rel='noopener noreferrer'>
-                        <Image
-                            src={imgpath}
-                            alt={imgdesc}
-                            title={imgdesc}
-                            className='image'
-                            fluid
-                            rounded
-                        />
-                    </a>
-                </Col>
-                <Col xs={12} md={9}>
-                    <h1>{title}</h1>
-                    <h2>{subtitle}</h2>
-                    {Content} {/* Render Content as a child, not as a component */}
-                </Col>
-            </Row>
+            <a href={imgref} target='_blank' rel='noopener noreferrer'>
+                <Image
+                    src={imgpath}
+                    alt={imgdesc}
+                    title={imgdesc}
+                    className='image'
+                    style={{
+                        maxWidth: window.innerWidth <= 750 ? '100%' : '30%',
+                        float: window.innerWidth <= 750 ? 'none' : 'left',
+                        marginRight: window.innerWidth <= 750 ? 'auto' : '2em',
+                        marginTop: '1rem',
+                        marginBottom: '1rem',
+                      }}
+                    fluid
+                    rounded
+                />
+            </a>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+            {Content} {/* Render Content as a child, not as a component */}
         </Container>
     )
 }

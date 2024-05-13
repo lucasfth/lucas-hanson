@@ -24,9 +24,9 @@ export const dhiData = {
                 <Image src={groupImg}
                     aria-label='Picture of the group that worked on the GreenUP project'
                     style={{
-                        maxWidth: window.innerWidth <= 576 ? '100%' : '40%',
-                        float: window.innerWidth <= 576 ? 'none' : 'right',
-                        marginLeft: window.innerWidth <= 576 ? 'auto' : '1rem',
+                        maxWidth: window.innerWidth <= 750 ? '100%' : '40%',
+                        float: window.innerWidth <= 750 ? 'none' : 'right',
+                        marginLeft: window.innerWidth <= 750 ? 'auto' : '2em',
                         marginTop: '1rem',
                         marginBottom: '1rem',
                     }}
@@ -50,9 +50,9 @@ export const dhiData = {
             <Image src='https://img.youtube.com/vi/eoQ5T-fo3Qc/0.jpg'
                 aria-label='Thumbnail of the video presentation'
                 style={{
-                    maxWidth: window.innerWidth <= 576 ? '100%' : '30%',
-                    float: window.innerWidth <= 576 ? 'none' : 'left',
-                    marginRight: window.innerWidth <= 576 ? 'auto' : '1rem',
+                    maxWidth: window.innerWidth <= 750 ? '100%' : '30%',
+                    float: window.innerWidth <= 750 ? 'none' : 'left',
+                    marginRight: window.innerWidth <= 750 ? 'auto' : '2em',
                     marginTop: '1rem',
                     marginBottom: '1rem',
                 }}

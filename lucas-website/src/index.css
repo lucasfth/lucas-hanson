@@ -1,12 +1,47 @@
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-Book.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-Italic.otf') format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-SemiBolditalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./otf/PPNeueMontreal-Thin.otf') format('opentype');
+  font-weight: 200;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
