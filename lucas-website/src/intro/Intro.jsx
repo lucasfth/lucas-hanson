@@ -1,11 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import { useContext, useEffect} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ThemeContext, NavbarHeightContext } from '../App';
-import lucas_full_body from './assets/lucas_full_body.jpg';
-import Alert from 'react-bootstrap/Alert';
+import lucas_full_body from './assets/lucas_full_body.webp';
+import wet_lucas from './assets/wet_lucas.webp';
 import './intro.css';
-import '../App.css';
 import Row from 'react-bootstrap/Row';
 
 function Intro() {
@@ -17,32 +16,42 @@ function Intro() {
 
   const navbarHeight = useContext(NavbarHeightContext);
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  const [isWiggling, setIsWiggling] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsWiggling(prevIsWiggling => isFlipped ? false : !prevIsWiggling);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isFlipped]);
+
   return (
     <>
       <Row>
         <Container style={{ textAlign: 'left', paddingTop: `${navbarHeight}px` }}>
-          <Alert variant='info'>
-            This website is a work in progress. It is built using React, React
-            Bootstrap, and Bootstrap. Until then please visit my{' '}
-            <Alert.Link href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/'>
-              LinkedIn
-            </Alert.Link>{' '}
-            profile.
-          </Alert>
-          <div className='image-container'
+          <div className={`image-container ${isWiggling ? 'wiggle' : ''}`}
           style={{
             maxWidth: window.innerWidth <= 750 ? '100%' : '20%',
+            width: window.innerWidth <= 750 ? '100%' : '20%',
             float: window.innerWidth <= 750 ? 'none' : 'right',
             marginLeft: window.innerWidth <= 750 ? 'auto' : '2em',
             marginTop: '1rem',
             marginBottom: '1rem',
-          }}>
-            <Image
-              src={lucas_full_body}
-              rounded
-              fluid
-              alt='Picture of Lucas Hanson'
-            />
+            transformStyle: 'preserve-3d',
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            transition: 'transform 0.8s',
+          }}
+          onClick={handleClick}>
+            <Image src={lucas_full_body} rounded fluid alt='Picture of Lucas Hanson' style={{ backfaceVisibility: 'hidden', position: 'absolute', boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)' }}/>
+            <Image src={wet_lucas} rounded fluid alt='Picture of Lucas Hanson' style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', position: 'absolute', boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)' }}/>
+            <div style={{ paddingTop: '100%', visibility: 'hidden' }}></div>
           </div>
           <h1>&gt; Lucas Hanson</h1>
           <p>

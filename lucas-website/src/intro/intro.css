@@ -116,3 +116,13 @@ a:hover {
     background-color: transparent;
   }
 }
+
+@keyframes wiggle {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(10deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
