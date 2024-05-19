@@ -13,6 +13,10 @@ const projectDataMap = {
 };
 
 function Page() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     
     const navbarHeight = useContext(NavbarHeightContext);
 
@@ -53,6 +57,7 @@ function Page() {
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
             {Content} {/* Render Content as a child, not as a component */}
+            {/* Make extra width at bottom */}
         </Container>
     )
 }

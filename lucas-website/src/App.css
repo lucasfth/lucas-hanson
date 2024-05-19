@@ -6,6 +6,8 @@
   --bezier: cubic-bezier(0,.7,.3,1);
   --background-sizing: 80%;
   --animation-time: 0.2s;
+  --max-width: 65rem;
+  --box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .App {
@@ -32,43 +34,34 @@
   color: #61dafb;
 }
 
-.grain {
-  background-image: url('./assets/grain.svg');
-  background-size: cover;
-  opacity: 0.09;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h2, h3, h4, h5, h6, li {
   font-family: 'Neue Montreal', sans-serif;
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 5em;
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 3em;
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 p {
-    font-size: 1.2em;
-    text-align: justify;
-    hyphens: auto;
+  font-size: 1.2em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+li {
+  font-size: 1.2em;
 }
 
 .light {
@@ -85,39 +78,17 @@ p {
   padding: 1em;
 }
 
-@media (max-width: 1200px) {
-  .container-padding {
-    padding-top: 4em;
-  }
+h1 {
+  font-family: 'Monaco', sans-serif;
+  font-size: 4em;
 }
 
-@media (max-width: 992px) {
-  .container-padding {
-    padding-top: 3em;
-  }
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 2em;
 }
 
-@media (max-width: 768px) {
-  .container-padding {
-    padding-top: 2em;
-  }
-}
-
-@media (max-width: 576px) {
-  .container-padding {
-    padding-top: 1em;
-  }
-}
-
-/* CUSTOMIZING NAVBAR */
-.custom-navbar-brand {
-  flex-grow: 1;
-  padding-right: 40px;
-}
-
-@media (min-width: 992px) {
-  .custom-navbar-brand {
-    flex-grow: 0;
-    padding-right: 0;
-  }
+a {
+  text-decoration: none;
 }

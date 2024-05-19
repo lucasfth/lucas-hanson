@@ -12,9 +12,9 @@ import Projects from './projects/Projects';
 import ThemeSwitch from './components/ThemeSwitch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Page from './projects/pages/Page';
+import Footer from './intro/Footer';
 
 export const ThemeContext = createContext();
-
 export const NavbarHeightContext = React.createContext();
 
 function App() {
@@ -57,6 +57,7 @@ function App() {
                 <Route path='/projects/pages/:title' element={<Page />} />
               </Routes>
             </Router>
+            <Footer />
           </div>
         </ThemeContext.Provider>
       </NavbarHeightContext.Provider>

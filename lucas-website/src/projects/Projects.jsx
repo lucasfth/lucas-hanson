@@ -1,22 +1,28 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './projects.css';
 import Bachelor from './pages/Bachelor';
 import DHI from './pages/DHI';
+import { NavbarHeightContext } from '../App';
+import { useContext } from 'react';
 
 function Projects () {
+    const navbarHeight = useContext(NavbarHeightContext);
+
     return (
-        <Container className='container-padding'>
+        <>
+            <h2  style={{ paddingTop: `${navbarHeight}px` }}>
+                Projects
+            </h2>
             <Row>
-                <Col className='d-flex justify-content-center'>
+                <Container style={{ paddingTop: `${0.5 * navbarHeight}px` }}>
                     <Bachelor />
-                </Col>
-                <Col className='d-flex justify-content-center'>
+                </Container>
+                <Container style={{ paddingTop: `${0.5 * navbarHeight}px` }}>
                     <DHI />
-                </Col>
+                </Container>
             </Row>
-        </Container>
+        </>
     )
 }
 

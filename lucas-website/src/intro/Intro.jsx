@@ -5,6 +5,8 @@ import { ThemeContext, NavbarHeightContext } from '../App';
 import lucas_full_body from './assets/lucas_full_body.jpg';
 import Alert from 'react-bootstrap/Alert';
 import './intro.css';
+import '../App.css';
+import Row from 'react-bootstrap/Row';
 
 function Intro() {
   const { theme } = useContext(ThemeContext);
@@ -16,65 +18,68 @@ function Intro() {
   const navbarHeight = useContext(NavbarHeightContext);
 
   return (
-    <Container style={{ textAlign: 'left', paddingTop: `${navbarHeight}px` }}>
-      <Alert variant='info'>
-        This website is a work in progress. It is built using React, React
-        Bootstrap, and Bootstrap. Until then please visit my{' '}
-        <Alert.Link href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/'>
-          LinkedIn
-        </Alert.Link>{' '}
-        profile.
-      </Alert>
-      <div className='image-container'
-      style={{
-        maxWidth: window.innerWidth <= 750 ? '100%' : '30%',
-        float: window.innerWidth <= 750 ? 'none' : 'left',
-        marginRight: window.innerWidth <= 750 ? 'auto' : '2em',
-        marginTop: '1rem',
-        marginBottom: '1rem',
-      }}>
-        <Image
-          src={lucas_full_body}
-          rounded
-          fluid
-          alt='Picture of Lucas Hanson'
-        />
-      </div>
-      <h1>Hello, I&apos;m Lucas</h1>
-      <p>
-        As a sixth-semester student of Software Development at the
-        IT-University of Copenhagen, I have hands-on experience in web
-        development, databases, and algorithms. I have gained a strong
-        foundation in the following programming languages:
-          <li>Java</li>
-          <li>C#</li>
-          <li>Golang</li>
-        My coursework has honed my problem-solving skills and solidified my
-        passion for technology. My helpful and enterprising nature, with
-        solid communication skills, make me a valuable addition to any team.
-        <br />
-        When not coding, I can be found at the local gym or in the
-        student-run Café called Analog. After volunteering as a barista and
-        former vice-chair, I may have become somewhat addicted to coffee,
-        and it is therefore essential to my coding routine ☕️
-        <br />
-        I am currently learning:
-          <li>Reflections on IT 🤔</li>
-          <li>Introduction to Artificial Intelligence 🤖</li>
-        Additionally, I am working on my bachelor project titled
-        &apos;Hand-Gesture-Based Interaction in Hybrid Meetings.&apos;
-        <br />
-        Feel free to connect, and let&apos;s see how our paths may cross in the
-        future 🔜
-        <br />
-        <a
-          href='mailto:lucasfth@bjelke-torres.com'
-          aria-label='Email Lucas Hanson'
-        >
-          Email 📧
-        </a>
-      </p>
-    </Container>
+    <>
+      <Row>
+        <Container style={{ textAlign: 'left', paddingTop: `${navbarHeight}px` }}>
+          <Alert variant='info'>
+            This website is a work in progress. It is built using React, React
+            Bootstrap, and Bootstrap. Until then please visit my{' '}
+            <Alert.Link href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/'>
+              LinkedIn
+            </Alert.Link>{' '}
+            profile.
+          </Alert>
+          <div className='image-container'
+          style={{
+            maxWidth: window.innerWidth <= 750 ? '100%' : '20%',
+            float: window.innerWidth <= 750 ? 'none' : 'right',
+            marginLeft: window.innerWidth <= 750 ? 'auto' : '2em',
+            marginTop: '1rem',
+            marginBottom: '1rem',
+          }}>
+            <Image
+              src={lucas_full_body}
+              rounded
+              fluid
+              alt='Picture of Lucas Hanson'
+            />
+          </div>
+          <h1>&gt; Lucas Hanson</h1>
+          <p>
+          Aspiring software developer focused on backend, eager to improve frontend skills.<br /><br />
+          Check out my projects below.
+          </p>
+          </Container>
+      </Row>
+      <Row>
+        <Container style={{ clear: 'both', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: `${0.5 * navbarHeight}px` }}>
+          <div className="terminal">
+            <div className="terminal-header">
+              <div className="buttons">
+                <span className="button red"></span>
+                <span className="button yellow"></span>
+                <span className="button green"></span>
+              </div>
+              <div className="title">LucasHanson.java</div>
+            </div>
+            <div className="terminal-body">
+              <code>
+                public class LucasHanson {'{'}<br />
+                <br />{'  '}private String location = &quot;Copenhagen S, Denmark&quot;;<br />
+                <br />{'  '}private String email = <a href='mailto:lucasfth@bjelke-torres.com'>&quot;lucasfth@bjelke-torres.com&quot;</a>;<br />
+                <br />{'  '}private String linkedin = <a href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer'>
+                  &quot;lucas-frey-torres-hanson&quot;</a>;<br />
+                <br />{'  '}private String github = <a href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer'>
+                  &quot;lucasfth&quot;</a>;<br />
+                <br />{'  '}private String[] skills = {'{'}&quot;Java&quot;, &quot;Python&quot;, &quot;C#&quot;, &quot;C&quot;, &quot;git&quot;, &quot;Golang&quot;{'}'};<br />
+                <br />{'}'};<br />
+                <span className='cursor' />
+              </code>
+            </div>
+          </div>
+        </Container>
+      </Row>
+    </>
   );
 }
 

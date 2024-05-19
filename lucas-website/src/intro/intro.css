@@ -1,3 +1,118 @@
 .image-container {
   position: relative;
 }
+
+.dark .footer {
+  background-color: black;
+}
+
+.light .footer {
+  background-color: white;
+}
+
+.terminal {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  text-align: left;
+}
+
+.light .terminal {
+  background-color: var(--dark-text);
+}
+
+.dark .terminal {
+  background-color: var(--light-text);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.light .terminal-header {
+  color: var(--light-text)
+}
+
+.dark .terminal-header {
+  color: var(--dark-text)
+}
+
+.dark .terminal {
+  background-color: var(--light-text);
+}
+
+.light .terminal {
+  background-color: var(--dark-text);
+}
+
+.buttons {
+  display: flex;
+  margin-right: 10px;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.button.red {
+  background-color: #ff5f56;
+}
+
+.button.yellow {
+  background-color: #ffbd2e;
+}
+
+.button.green {
+  background-color: #27c93f;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.terminal-body code {
+  font-family: monospace;
+  padding: 10px;
+  display: block;
+  white-space: pre-wrap;
+}
+
+.light .terminal-body code {
+  color: var(--light-text);
+}
+
+.dark .terminal-body code {
+  color: var(--dark-text);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.9ch;
+  height: 1.2em;
+  background-color: currentColor;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}

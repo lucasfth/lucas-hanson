@@ -11,6 +11,15 @@ export const dhiData = {
     title: 'DHI',
     subtitle: 'GreenUP project',
     summary: `This project was part of a course during our 4th semester where we learned to use Scrum with a business to produce value for them.`,
+    Info: 
+    <>
+        <p style={{ textAlign: 'left' }}>
+            <Image src='https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54' rounded />{' '}
+            <Image src='https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white' rounded />{' '}
+            <Image src='https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB' rounded />{' '}
+            <Image src='https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi' rounded />
+        </p>
+    </>,
     Content: 
     <>
         <p>
@@ -41,7 +50,7 @@ export const dhiData = {
         As a team, we tried to understand the needs of urban planners.
         Through collaborative discussions and iterative development cycles, we crafted a MVP that incorporates scenario-based modeling and satellite-based information to facilitate informed decision-making.
         One of the highlights of this project was creating a video presentation to showcase our prototype. 
-        You can watch the presentation here.
+        You can watch the presentation by clicking the image of the map.
         </p>
         <a href='https://www.youtube.com/watch?v=eoQ5T-fo3Qc' 
             aria-label='Link to the video presentation' 
