@@ -1,18 +1,27 @@
 {
   "files": {
-    "main.css": "/lucas-hanson/static/css/main.57600263.css",
-    "main.js": "/lucas-hanson/static/js/main.7c8c1e56.js",
+    "main.css": "/lucas-hanson/static/css/main.12a48452.css",
+    "main.js": "/lucas-hanson/static/js/main.99b5d18c.js",
     "static/js/453.2aea9e49.chunk.js": "/lucas-hanson/static/js/453.2aea9e49.chunk.js",
     "static/media/lucas_full_body.jpg": "/lucas-hanson/static/media/lucas_full_body.c722c5702442c697ce66.jpg",
+    "static/media/greenup.png": "/lucas-hanson/static/media/greenup.b39a1a77a002d5f05b87.png",
+    "static/media/dhi_group_pic.jpeg": "/lucas-hanson/static/media/dhi_group_pic.773dba3f184be77246b8.jpeg",
+    "static/media/bachelor_frontpage.png": "/lucas-hanson/static/media/bachelor_frontpage.1cfd4ecfd88780856442.png",
+    "static/media/PPNeueMontreal-SemiBolditalic.otf": "/lucas-hanson/static/media/PPNeueMontreal-SemiBolditalic.ef9ee1837108053b9463.otf",
+    "static/media/PPNeueMontreal-Medium.otf": "/lucas-hanson/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
+    "static/media/PPNeueMontreal-Bold.otf": "/lucas-hanson/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
+    "static/media/PPNeueMontreal-Book.otf": "/lucas-hanson/static/media/PPNeueMontreal-Book.cd21cf351f4da50cf75d.otf",
+    "static/media/PPNeueMontreal-Italic.otf": "/lucas-hanson/static/media/PPNeueMontreal-Italic.bb9c502e17d3b9edb369.otf",
+    "static/media/PPNeueMontreal-Thin.otf": "/lucas-hanson/static/media/PPNeueMontreal-Thin.113878d75d11299845e2.otf",
     "static/media/logo.png": "/lucas-hanson/static/media/logo.9bdef2cb87f0281b5ac8.png",
+    "static/media/Monaco.ttf": "/lucas-hanson/static/media/Monaco.b55576c32bebc9c8a480.ttf",
     "index.html": "/lucas-hanson/index.html",
-    "static/media/grain.svg": "/lucas-hanson/static/media/grain.0aad3e6d6c7ea27f0efa.svg",
-    "main.57600263.css.map": "/lucas-hanson/static/css/main.57600263.css.map",
-    "main.7c8c1e56.js.map": "/lucas-hanson/static/js/main.7c8c1e56.js.map",
+    "main.12a48452.css.map": "/lucas-hanson/static/css/main.12a48452.css.map",
+    "main.99b5d18c.js.map": "/lucas-hanson/static/js/main.99b5d18c.js.map",
     "453.2aea9e49.chunk.js.map": "/lucas-hanson/static/js/453.2aea9e49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57600263.css",
-    "static/js/main.7c8c1e56.js"
+    "static/css/main.12a48452.css",
+    "static/js/main.99b5d18c.js"
   ]
 }
