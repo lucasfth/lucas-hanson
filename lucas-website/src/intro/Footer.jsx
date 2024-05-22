@@ -2,6 +2,9 @@ import React from 'react';
 import { NavbarHeightContext } from '../App';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
     const navbarHeight = React.useContext(NavbarHeightContext);
@@ -13,15 +16,15 @@ function Footer() {
         </h2>
         <p style={{ paddingTop: `${0.25 * navbarHeight}px`, textAlign: 'center' }}>
           <a href='mailto:lucasfth@bjelke-torres.com' aria-label='Email Lucas Hanson' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
-            lucasfth@bjelke-torres.com
+            <FontAwesomeIcon icon={faEnvelope} />
             </a>
           {' | '}
           <a href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson LinkedIn' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
-            LinkedIn
+            <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           {' | '}
           <a href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson GitHub' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
-            GitHub
+            <FontAwesomeIcon icon={faGithub} />
             </a>
           </p>
           <p style={{ paddingTop: `${0.25 * navbarHeight}px`, textAlign: 'center', fontSize: '0.9em' }}>

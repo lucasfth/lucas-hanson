@@ -7,6 +7,7 @@ import wet_lucas from './assets/wet_lucas.webp';
 import './intro.css';
 import Row from 'react-bootstrap/Row';
 import { Link as ScrollLink } from 'react-scroll';
+import { ReactTyped } from 'react-typed';
 
 function Intro() {
   const { theme } = useContext(ThemeContext);
@@ -63,7 +64,15 @@ function Intro() {
             <Image src={wet_lucas} rounded fluid alt='Picture of Lucas Hanson who has just dipped into the ocean' style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', position: 'absolute', boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)' }}/>
             <div style={{ paddingTop: '100%', visibility: 'hidden' }}></div>
           </div>
-          <h1>&gt; Lucas Hanson</h1>
+          <h1>
+            <ReactTyped
+              strings={["Hello there 👋", "I am", "Lucad Gasdon", "Lucas Hanson"]}
+              typeSpeed={100}
+              backSpeed={50}
+              cursorChar=' '
+              blinkSpeed={2000}
+              showCursor={true} />
+            </h1>
           <p>
           Aspiring software developer focused on backend, eager to improve frontend skills.<br /><br />
           Check out my <ScrollLink activeClass='active' to='projects' spy={true} duration={200} className='section-link' aria-label='Projects'>projects</ScrollLink> below.

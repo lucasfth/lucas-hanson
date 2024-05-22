@@ -107,7 +107,7 @@ a:hover {
   width: 0.9ch;
   height: 1.2em;
   background-color: currentColor;
-  animation: blink 1s steps(1) infinite;
+  animation: blink 0.7s steps(1) infinite;
   vertical-align: middle;
 }
 
@@ -129,4 +129,13 @@ a:hover {
 
 .section-link {
   color: #0D6EFD;
+}
+
+.typed-cursor {
+  display: inline-block;
+  width: 0.8ch;
+  height: 1em;
+  margin-left: 0.2ch;
+  background-color: currentColor;
+  vertical-align: middle;
 }
