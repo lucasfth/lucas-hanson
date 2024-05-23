@@ -10,23 +10,23 @@ function Footer() {
     const navbarHeight = React.useContext(NavbarHeightContext);
 
     return (
-      <Row style={{ textAlign: 'center', clear: 'both', paddingTop: `${navbarHeight}px` }}>
+      <Row style={{ textAlign: 'center', clear: 'both', paddingTop: `${2*navbarHeight}px` }}>
         <h2>
           Contact me
         </h2>
-        <p style={{ paddingTop: `${0.25 * navbarHeight}px`, textAlign: 'center' }}>
-          <a href='mailto:lucasfth@bjelke-torres.com' aria-label='Email Lucas Hanson' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
+        <h3 style={{ paddingTop: `${0.25 * navbarHeight}px`, textAlign: 'center' }}>
+          <a className="link" href='mailto:lucasfth@bjelke-torres.com' aria-label='Email Lucas Hanson' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
             <FontAwesomeIcon icon={faEnvelope} />
             </a>
           {' | '}
-          <a href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson LinkedIn' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
+          <a className="link" href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson LinkedIn' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
             <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           {' | '}
-          <a href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson GitHub' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
+          <a className="link" href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer' aria-label='Lucas Hanson GitHub' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
             <FontAwesomeIcon icon={faGithub} />
             </a>
-          </p>
+          </h3>
           <p style={{ paddingTop: `${0.25 * navbarHeight}px`, textAlign: 'center', fontSize: '0.9em' }}>
             {/* Also link to the license that my repository is under */}
             Created by Lucas Hanson - 2024

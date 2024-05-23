@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ThemeContext, NavbarHeightContext } from '../App';
 import lucas_full_body from './assets/lucas_full_body.webp';
 import wet_lucas from './assets/wet_lucas.webp';
@@ -20,28 +20,29 @@ function Intro() {
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [wiggle, setWiggle] = useState(false);
-  const isWiggling = useRef(false);
+  const [hasBeenFlipped, setHasBeenFlipped] = useState(false);
   
   const handleClick = () => {
-    isWiggling.current = false;
     setWiggle(false);
     setTimeout(() => {
       setIsFlipped(!isFlipped);
     }, 0);
+    setHasBeenFlipped(true);
   };
   
   useEffect(() => {
+    if (hasBeenFlipped) {
+      return;
+    }
     const interval = setInterval(() => {
-      isWiggling.current = true;
       setWiggle(true);
       setTimeout(() => {
-        isWiggling.current = false;
         setWiggle(false);
       }, 1000);
     }, 5000);
   
     return () => clearInterval(interval);
-  }, [isFlipped]);
+  }, [hasBeenFlipped]);
 
   return (
     <>
@@ -75,7 +76,7 @@ function Intro() {
             </h1>
           <p>
           Aspiring software developer focused on backend, eager to improve frontend skills.<br /><br />
-          Check out my <ScrollLink activeClass='active' to='projects' spy={true} duration={200} className='section-link' aria-label='Projects'>projects</ScrollLink> below.
+          Check out my <ScrollLink activeClass='active' to='projects' spy={true} duration={200} className='section-link link' aria-label='Projects'>projects</ScrollLink> below.
           </p>
           </Container>
       </Row>
@@ -88,19 +89,25 @@ function Intro() {
                 <span className="button yellow"></span>
                 <span className="button green"></span>
               </div>
-              <div className="title">LucasHanson.java</div>
+              <div className="title">LucasHanson</div>
             </div>
             <div className="terminal-body">
               <code>
-                public class LucasHanson {'{'}<br />
-                <br />{'  '}private String location = &quot;Copenhagen S, Denmark&quot;;<br />
-                <br />{'  '}private String email = <a href='mailto:lucasfth@bjelke-torres.com'>&quot;lucasfth@bjelke-torres.com&quot;</a>;<br />
-                <br />{'  '}private String linkedin = <a href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer'>
-                  &quot;lucas-frey-torres-hanson&quot;</a>;<br />
-                <br />{'  '}private String github = <a href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer'>
-                  &quot;lucasfth&quot;</a>;<br />
-                <br />{'  '}private String[] skills = {'{'}&quot;Java&quot;, &quot;Python&quot;, &quot;C#&quot;, &quot;C&quot;, &quot;git&quot;, &quot;Golang&quot;{'}'};<br />
-                <br />{'}'};<br />
+                &gt; l.getLocation()
+                <br />==&gt; &quot;Copenhagen S, Denmark&quot;<br />
+                <br />&gt; l.getEmail()
+                <br />==&gt; &quot;<a className="link" href='mailto:lucasfth@bjelke-torres.com'>lucasfth@bjelke-torres.com</a>&quot;<br />
+                <br />&gt; l.getLinkedin()
+                <br />==&gt; &quot;<a className="link" href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer'>
+                  lucas-frey-torres-hanson</a>&quot;<br />
+                <br />&gt; l.getGithub()
+                <br />==&gt; &quot;<a className="link" href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer'>
+                  lucasfth</a>&quot;<br />
+                <br />&gt; l.getSkills()
+                <br />==&gt; String[7] {'{'} &quot;git&quot;, &quot;Java&quot;, &quot;Python&quot;, &quot;C#&quot;, &quot;C&quot;, &quot;Golang&quot;, &quot; F#&quot; {'}'}<br />
+                <br />&gt; l.getSpokenLanguages()
+                <br />==&gt; {'{'}English=Professional, Danish=Native, Spanish=Elementary{'}'}
+                <br />
                 <span className='cursor' />
               </code>
             </div>

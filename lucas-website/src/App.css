@@ -21,7 +21,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -61,6 +60,18 @@ p {
   hyphens: auto;
 }
 
+a {
+  font-weight: 600;
+}
+
+.light .link {
+  color: var(--light-text);
+}
+
+.dark .link {
+  color: var(--dark-text);
+}
+
 li {
   font-size: 1.2em;
 }
@@ -90,11 +101,7 @@ h1 {
   padding: 0 2em;
 }
 
-a {
-  text-decoration: none;
-}
-
-.nav-link:hover {
+.nav-link:hover, a:hover {
   cursor: pointer;
 }
 
