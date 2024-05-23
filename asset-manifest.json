@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lucas-hanson/static/css/main.7bb8121f.css",
-    "main.js": "/lucas-hanson/static/js/main.7bccc368.js",
+    "main.css": "/lucas-hanson/static/css/main.80644008.css",
+    "main.js": "/lucas-hanson/static/js/main.0b617ec6.js",
     "static/js/453.2aea9e49.chunk.js": "/lucas-hanson/static/js/453.2aea9e49.chunk.js",
     "static/media/greenup.png": "/lucas-hanson/static/media/greenup.b39a1a77a002d5f05b87.png",
     "static/media/dhi_group_pic.jpeg": "/lucas-hanson/static/media/dhi_group_pic.773dba3f184be77246b8.jpeg",
@@ -17,12 +17,12 @@
     "static/media/wet_lucas.webp": "/lucas-hanson/static/media/wet_lucas.f09f0e7a81dd3b38e840.webp",
     "static/media/Monaco.ttf": "/lucas-hanson/static/media/Monaco.b55576c32bebc9c8a480.ttf",
     "index.html": "/lucas-hanson/index.html",
-    "main.7bb8121f.css.map": "/lucas-hanson/static/css/main.7bb8121f.css.map",
-    "main.7bccc368.js.map": "/lucas-hanson/static/js/main.7bccc368.js.map",
+    "main.80644008.css.map": "/lucas-hanson/static/css/main.80644008.css.map",
+    "main.0b617ec6.js.map": "/lucas-hanson/static/js/main.0b617ec6.js.map",
     "453.2aea9e49.chunk.js.map": "/lucas-hanson/static/js/453.2aea9e49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bb8121f.css",
-    "static/js/main.7bccc368.js"
+    "static/css/main.80644008.css",
+    "static/js/main.0b617ec6.js"
   ]
 }
