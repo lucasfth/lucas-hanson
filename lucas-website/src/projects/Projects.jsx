@@ -1,29 +1,24 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import './projects.css';
-import Bachelor from './pages/Bachelor';
-import DHI from './pages/DHI';
-import { NavbarHeightContext } from '../App';
-import { useContext } from 'react';
+import React from "react"
+import { useContext } from "react"
+import Container from "react-bootstrap/Container"
+import { NavbarHeightContext } from "../App"
+import Project from "./Project"
+import dhi from "./DHI"
+import bachelor from "./Bachelor"
 
-function Projects () {
-    const navbarHeight = useContext(NavbarHeightContext);
+const projects = [bachelor, dhi]
+
+function Projects() {
+    const navbarHeight = useContext(NavbarHeightContext)
 
     return (
-        <>
-            <h2  style={{ paddingTop: `${navbarHeight}px` }}>
-                Projects
-            </h2>
-            <Row>
-                <Container style={{ paddingTop: `${0.5 * navbarHeight}px` }}>
-                    <Bachelor />
-                </Container>
-                <Container style={{ paddingTop: `${0.5 * navbarHeight}px` }}>
-                    <DHI />
-                </Container>
-            </Row>
-        </>
-    )
+        <Container style={{ textAlign: 'center', paddingTop: `${Number(navbarHeight)}px` }}>
+            <h2>Projects</h2>
+            {projects.map((project, index) => (
+                <Project key={index} {...project} />
+            ))}
+        </Container>
+    );
 }
 
 export default Projects;

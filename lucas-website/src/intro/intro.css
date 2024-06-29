@@ -3,135 +3,141 @@
 }
 
 .dark .footer {
-  background-color: black;
+background-color: black;
 }
 
 .light .footer {
-  background-color: white;
+background-color: white;
 }
 
 .terminal {
-  border-radius: 10px;
-  width: 100%;
-  box-shadow: var(--box-shadow);
-  text-align: left;
+border-radius: 10px;
+width: 100%;
+box-shadow: var(--box-shadow);
+text-align: left;
 }
 
 .light .terminal {
-  background-color: var(--dark-text);
+background-color: var(--dark-text);
 }
 
 .dark .terminal {
-  background-color: var(--light-text);
+background-color: var(--light-text);
 }
 
 .terminal-header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+display: flex;
+align-items: center;
+padding: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 
 .light .terminal-header {
-  color: var(--light-text)
+color: var(--light-text)
 }
 
 .dark .terminal-header {
-  color: var(--dark-text)
+color: var(--dark-text)
 }
 
 .dark .terminal {
-  background-color: var(--light-text);
+background-color: var(--light-text);
 }
 
 .light .terminal {
-  background-color: var(--dark-text);
+background-color: var(--dark-text);
 }
 
 .buttons {
-  display: flex;
-  margin-right: 10px;
+display: flex;
+margin-right: 10px;
 }
 
 .button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 8px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+margin-right: 8px;
 }
 
 .button.red {
-  background-color: #ff5f56;
+background-color: #ff5f56;
 }
 
 .button.yellow {
-  background-color: #ffbd2e;
+background-color: #ffbd2e;
 }
 
 .button.green {
-  background-color: #27c93f;
+background-color: #27c93f;
 }
 
 .title {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
+flex: 1;
+text-align: center;
+font-weight: bold;
 }
 
 .terminal-body {
-  padding: 20px;
+padding: 20px;
 }
 
 a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 .terminal-body code {
-  font-family: monospace;
-  padding: 10px;
-  display: block;
-  white-space: pre-wrap;
+font-family: monospace;
+padding: 10px;
+display: block;
+white-space: pre-wrap;
 }
 
 .light .terminal-body code {
-  color: var(--light-text);
+color: var(--light-text);
 }
 
 .dark .terminal-body code {
-  color: var(--dark-text);
+color: var(--dark-text);
 }
 
 .cursor {
-  display: inline-block;
-  width: 0.9ch;
-  height: 1.2em;
-  background-color: currentColor;
-  animation: blink 0.7s steps(1) infinite;
-  vertical-align: middle;
+display: inline-block;
+width: 0.9ch;
+height: 1.2em;
+background-color: currentColor;
+animation: blink 0.7s steps(1) infinite;
+vertical-align: middle;
 }
 
 @keyframes blink {
-  50% {
-    background-color: transparent;
-  }
+50% {
+  background-color: transparent;
+}
 }
 
 @keyframes wiggle {
-  0% { transform: rotateY(0deg); }
-  50% { transform: rotateY(-15deg); }
-  100% { transform: rotateY(0deg); }
+0% { transform: rotateY(0deg); }
+50% { transform: rotateY(-15deg); }
+100% { transform: rotateY(0deg); }
 }
 
 .wiggle {
-  animation: wiggle 0.5s ease-in-out infinite;
+animation: wiggle 0.5s ease-in-out infinite;
 }
 
 .typed-cursor {
-  display: inline-block;
-  width: 0.8ch;
-  height: 1em;
-  margin-left: 0.2ch;
-  background-color: currentColor;
-  vertical-align: middle;
+display: inline-block;
+width: 0.8ch;
+height: 1em;
+margin-left: 0.2ch;
+background-color: currentColor;
+vertical-align: middle;
+}
+
+@media screen and (max-width: 750px) {
+.typed-container {
+  height: 2.5em;
+}
 }

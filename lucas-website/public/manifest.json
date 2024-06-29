@@ -1,6 +1,7 @@
 {
   "short_name": "Lucas Hanson",
   "name": "Lucas Hanson | Portfolio",
+  "start_url": ".",
   "icons": [
     {
       "src": "favicon.ico",
