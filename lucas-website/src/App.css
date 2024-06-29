@@ -106,6 +106,8 @@ h1 {
 }
 
 .custom-navbar-brand {
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
   padding-right: 40px;
 }

@@ -42,7 +42,7 @@ function App() {
       <NavbarHeightContext.Provider value={navbarHeight}>
         <Navbar data-bs-theme={theme} expand='lg' className='d-flex' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(250,250,250,0.5)' : 'rgba(0.3,0.3,0.3,0.5)', backdropFilter: 'blur(5px)'}}>
           <Container fluid>
-            <Navbar.Brand className='custom-navbar-brand'><Image src={logo} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
+          <Navbar.Brand className='custom-navbar-brand'><Image src={logo} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
             <Navbar.Collapse id='basic-navbar-nav'>
               <Nav className='me-auto'>
