@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 
 export const ThemeContext = createContext();
 export const NavbarHeightContext = React.createContext();
+export const ScrollContext = React.createContext();
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -40,24 +41,26 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <NavbarHeightContext.Provider value={navbarHeight}>
-        <Navbar data-bs-theme={theme} expand='lg' className='d-flex' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(250,250,250,0.5)' : 'rgba(0.3,0.3,0.3,0.5)', backdropFilter: 'blur(5px)'}}>
-          <Container fluid>
-          <Navbar.Brand className='custom-navbar-brand'><Image src={logo} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
-            <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav className='me-auto'>
-                <button onClick={() => scrollToSection('intro')} className='nav-link custom-nav-link' aria-label='Scroll to about me section'>About me</button>
-                <button onClick={() => scrollToSection('projects')} className='nav-link custom-nav-link' aria-label='Scroll to projects section'>Projects</button>
-                <button onClick={() => scrollToSection('contact')} className='nav-link custom-nav-link' aria-label='Scroll to contact section'>Contact</button>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-          <ThemeSwitch/>
-        </Navbar>
-        <div id='intro'><Intro /></div>
-        <div id='projects'><Projects /></div>
-        <div id='contact'><Footer /></div>
-        <div style={{ paddingBottom: `${0.5*Number(navbarHeight)}px` }} />
+        <ScrollContext.Provider value={scrollToSection}>
+          <Navbar data-bs-theme={theme} expand='lg' className='d-flex' fixed='top' style={{backgroundColor: theme === 'light' ? 'rgba(250,250,250,0.5)' : 'rgba(0.3,0.3,0.3,0.5)', backdropFilter: 'blur(5px)'}}>
+            <Container fluid>
+            <Navbar.Brand className='custom-navbar-brand'><Image src={logo} fluid style={{height: '30px' }} rounded alt='Website logo'/></Navbar.Brand>
+              <Navbar.Toggle aria-controls='basic-navbar-nav' className='d-lg-none order-first' />
+              <Navbar.Collapse id='basic-navbar-nav'>
+                <Nav className='me-auto'>
+                  <button onClick={() => scrollToSection('intro')} className='nav-link custom-nav-link' aria-label='Scroll to about me section'>About me</button>
+                  <button onClick={() => scrollToSection('projects')} className='nav-link custom-nav-link' aria-label='Scroll to projects section'>Projects</button>
+                  <button onClick={() => scrollToSection('contact')} className='nav-link custom-nav-link' aria-label='Scroll to contact section'>Contact</button>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+            <ThemeSwitch/>
+          </Navbar>
+          <div id='intro'><Intro /></div>
+          <div id='projects'><Projects /></div>
+          <div id='contact'><Footer /></div>
+          <div style={{ paddingBottom: `${0.5*Number(navbarHeight)}px` }} />
+        </ScrollContext.Provider>
       </NavbarHeightContext.Provider>
     </ThemeContext.Provider>
   );

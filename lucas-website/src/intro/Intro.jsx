@@ -1,12 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { useContext, useEffect, useState } from 'react';
-import { ThemeContext, NavbarHeightContext } from '../App';
+import { ThemeContext, NavbarHeightContext, ScrollContext } from '../App';
 import lucas_full_body from './assets/lucas_full_body.webp';
 import wet_lucas from './assets/wet_lucas.webp';
 import './intro.css';
 import { ReactTyped } from 'react-typed';
-import { Link as ScrollLink } from 'react-scroll';
 
 function Intro() {
   const name = 'lucas'
@@ -21,7 +20,7 @@ function Intro() {
   const [isFlipped, setIsFlipped] = useState(false)
   const [wiggle, setWiggle] = useState(false)
   const [hasBeenFlipped, setHasBeenFlipped] = useState(false)
-  
+
   const handleClick = () => {
     setWiggle(false)
     setTimeout(() => {
@@ -43,6 +42,8 @@ function Intro() {
   
     return () => clearInterval(interval)
   }, [hasBeenFlipped]);
+
+  const scrollToSection = useContext(ScrollContext)
 
   return (
     <>
@@ -76,7 +77,7 @@ function Intro() {
           </h1>
           <p>
           Aspiring software developer focused on backend, eager to improve frontend skills.<br /><br />
-          Check out my <ScrollLink activeClass='active' to='projects' spy={true} duration={200} className='section-link link' aria-label='Projects'>projects</ScrollLink> below.
+          Check out my <a onClick={() => scrollToSection('projects')} className='section-link link' aria-label='Projects'>projects</a> below.
           </p>
         </Container>
         <Container style={{ clear: 'both', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: `${0.5 * Number(navbarHeight)}px` }}>
