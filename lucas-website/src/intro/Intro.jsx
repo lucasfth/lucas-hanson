@@ -102,10 +102,12 @@ function Intro() {
                 <br />&gt; {name}.getGithub()
                 <br />==&gt; &quot;<a className='link' href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer'>
                   lucasfth</a>&quot;<br />
+                <br />&gt; {name}.getLanguages()
+                <br />==&gt; String[8] {'{'} &quot;Java&quot;, &quot;C#&quot;, &quot;Go&quot;, &quot;JavaScript&quot;, &quot;Kotlin&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;F#&quot; {'}'}<br />
                 <br />&gt; {name}.getSkills()
-                <br />==&gt; String[7] {'{'} &quot;git&quot;, &quot;Java&quot;, &quot;Python&quot;, &quot;C#&quot;, &quot;C&quot;, &quot;Golang&quot;, &quot; F#&quot; {'}'}<br />
+                <br />==&gt; String[6] {'{'} &quot;git&quot;, &quot;SQL&quot;, &quot;HTML&quot;, &quot;CSS&quot;, &quot;React&quot;, &quot;SQL&quot; {'}'}<br />
                 <br />&gt; {name}.getSpokenLanguages()
-                <br />==&gt; {'{'}English=Professional, Danish=Native, Spanish=Elementary{'}'}
+                <br />==&gt; {'{'} English=Professional, Danish=Native, Spanish=Elementary {'}'}
                 <br />
                 <span className='cursor' />
               </code>

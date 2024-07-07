@@ -6,7 +6,7 @@ function ThemeSwitch() {
     const { theme, toggleTheme } = useContext(ThemeContext)
 
     return (
-        <div className={'theme-switch'} style={{ position: 'absolute', top: '30px', right: '15px', transform: 'translateY(-50%)' }}>
+        <div className={'theme-switch'}>
             <input
                 onChange={toggleTheme}
                 checked={theme === 'dark'}

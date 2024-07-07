@@ -1,19 +1,19 @@
-import Image from "react-bootstrap/Image";
+import Image from 'react-bootstrap/Image';
 
 export const Bachelor = {
-    img: "/assets/bachelor_frontpage.webp",
-    imgdesc: "Link to download the bachelor thesis PDF",
-    imgref: "/assets/hand-gesture-based_interaction.pdf",
-    title: "Bachelor",
-    subtitle: "Hand-Gesture-Based Interaction in Hybrid Meetings",
+    img: '/assets/bachelor_frontpage.webp',
+    imgdesc: 'Click to download the bachelor thesis PDF',
+    imgref: '/assets/hand-gesture-based_interaction.pdf',
+    title: 'Bachelor',
+    subtitle: 'Hand-Gesture-Based Interaction in Hybrid Meetings',
     summary: `The project explored intuitive hand gestures to control virtual meeting settings, 
     aiming to enhance the efficiency and user experience in hybrid meeting environments.`,
     Info:
     <>
-        <p style={{ textAlign: "left" }}>
-            <Image src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python logo" rounded />{" "}
-            <Image src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow logo" rounded />{" "}
-            <Image src="https://img.shields.io/badge/MediaPipe-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="MediaPipe logo" rounded />{" "}
+        <p style={{ textAlign: 'left' }}>
+            <Image src='https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54' rounded alt='Python logo' />{' '}
+            <Image src='https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white' rounded alt='TensorFlow logo' />{' '}
+            <Image src='https://img.shields.io/badge/MediaPipe-4285F4?style=for-the-badge&logo=google&logoColor=white' rounded alt='MediaPipe logo' />{' '}
         </p>
     </>,
     Content: 

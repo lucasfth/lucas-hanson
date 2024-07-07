@@ -136,8 +136,14 @@ background-color: currentColor;
 vertical-align: middle;
 }
 
-@media screen and (max-width: 750px) {
-.typed-container {
-  height: 2.5em;
+@media screen and (max-width: 599px) {
+  .typed-container {
+    height: 2.5em;
+  }
 }
+
+@media screen and (max-width: 338px) {
+  .typed-container {
+    height: 3.7em;
+  }
 }
