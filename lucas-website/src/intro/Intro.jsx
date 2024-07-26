@@ -94,21 +94,14 @@ function Intro() {
               <code>
                 &gt; {name}.getLocation()
                 <br />==&gt; &quot;Copenhagen S, Denmark&quot;<br />
-                <br />&gt; {name}.getEmail()
-                <br />==&gt; &quot;<a className='link' href='mailto:lucasfth@bjelke-torres.com'>lucasfth@bjelke-torres.com</a>&quot;<br />
-                <br />&gt; {name}.getLinkedin()
-                <br />==&gt; &quot;<a className='link' href='https://www.linkedin.com/in/lucas-frey-torres-hanson-b6b79320b/' target='_blank' rel='noopener noreferrer'>
-                  lucas-frey-torres-hanson</a>&quot;<br />
-                <br />&gt; {name}.getGithub()
-                <br />==&gt; &quot;<a className='link' href='https://github.com/lucasfth' target='_blank' rel='noopener noreferrer'>
-                  lucasfth</a>&quot;<br />
                 <br />&gt; {name}.getLanguages()
                 <br />==&gt; String[8] {'{'} &quot;Java&quot;, &quot;C#&quot;, &quot;Go&quot;, &quot;JavaScript&quot;, &quot;Kotlin&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;F#&quot; {'}'}<br />
                 <br />&gt; {name}.getSkills()
                 <br />==&gt; String[6] {'{'} &quot;git&quot;, &quot;SQL&quot;, &quot;HTML&quot;, &quot;CSS&quot;, &quot;React&quot;, &quot;SQL&quot; {'}'}<br />
                 <br />&gt; {name}.getSpokenLanguages()
-                <br />==&gt; {'{'} English=Professional, Danish=Native, Spanish=Elementary {'}'}
-                <br />
+                <br />==&gt; {'{'} English=Professional, Danish=Native, Spanish=Elementary {'}'}<br />
+                <br />&gt; {name}.getCV()
+                <br />==&gt; <a href='https://cv.lucashanson.dk' target='_blank' rel='noopener noreferrer'>&quot;cv.lucashanson.dk&quot;</a><br />
                 <span className='cursor' />
               </code>
             </div>

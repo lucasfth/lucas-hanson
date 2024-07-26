@@ -12,7 +12,7 @@ function Footer() {
     return (
       <Container style={{ textAlign: 'center', paddingTop: `${2*Number(navbarHeight)}px` }}>
         <h2>
-          Contact me
+          Contact
         </h2>
         <h3 style={{ paddingTop: `${0.25 * Number(navbarHeight)}px`, textAlign: 'center' }}>
           <a className='link' href='mailto:contact@lucashanson.dk' aria-label='Email Lucas Hanson' style={{ marginRight: '1rem', marginLeft: '1rem' }}>
@@ -36,7 +36,7 @@ function Footer() {
             <Image src='https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white' alt='Bootstrap logo' rounded />{' '}
             <Image src='https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white' alt='NPM logo' rounded />{' '}
             <br /><br />
-            It is hosted on<br /><br />
+            Hosted on<br /><br />
             {/* Nordicway ( image is here for the shield to use /wp-content/uploads/2019/11/logo_nordicway_byline.png) */}
             <Image src='https://img.shields.io/badge/Nordicway-3E80C1?style=for-the-badge&logo=nordicway&logoColor=white' alt='Nordicway logo' rounded />
           </p>
