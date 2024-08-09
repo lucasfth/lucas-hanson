@@ -72,4 +72,4 @@ export const Bachelor = {
   </>,
 }
 
-export default Bachelor;
+export default Bachelor

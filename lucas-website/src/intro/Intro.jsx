@@ -92,16 +92,16 @@ function Intro() {
             </div>
             <div className='terminal-body'>
               <code>
-                &gt; {name}.getLocation()
-                <br />==&gt; &quot;Copenhagen S, Denmark&quot;<br />
-                <br />&gt; {name}.getLanguages()
-                <br />==&gt; String[8] {'{'} &quot;Java&quot;, &quot;C#&quot;, &quot;Go&quot;, &quot;JavaScript&quot;, &quot;Kotlin&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;F#&quot; {'}'}<br />
-                <br />&gt; {name}.getSkills()
-                <br />==&gt; String[6] {'{'} &quot;git&quot;, &quot;SQL&quot;, &quot;HTML&quot;, &quot;CSS&quot;, &quot;React&quot;, &quot;SQL&quot; {'}'}<br />
-                <br />&gt; {name}.getSpokenLanguages()
-                <br />==&gt; {'{'} English=Professional, Danish=Native, Spanish=Elementary {'}'}<br />
-                <br />&gt; {name}.getCV()
-                <br />==&gt; <a href='https://cv.lucashanson.dk' target='_blank' rel='noopener noreferrer'>&quot;cv.lucashanson.dk&quot;</a><br />
+                &gt; {name}.location;
+                <br />&lt; &quot;Copenhagen S, Denmark&quot;<br />
+                <br />&gt; {name}.languages;
+                <br />&lt; &#9654; (8) {'['} &quot;Java&quot;, &quot;C#&quot;, &quot;Go&quot;, &quot;JavaScript&quot;, &quot;Kotlin&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;F#&quot; {']'}<br />
+                <br />&gt; {name}.skills;
+                <br />&lt; &#9654; (6) {'['} &quot;git&quot;, &quot;SQL&quot;, &quot;HTML&quot;, &quot;CSS&quot;, &quot;React&quot;, &quot;SQL&quot; {']'}<br />
+                <br />&gt; {name}.spokenLanguages;
+                <br />&lt; &#9654; {'{'} English: &quot;Professional&quot;, Danish: &quot;Native&quot;, Spanish: &quot;Elementary&quot; {'}'}<br />
+                <br />&gt; {name}.cv;
+                <br />&lt; <a href='https://cv.lucashanson.dk' target='_blank' rel='noopener noreferrer'>&quot;cv.lucashanson.dk&quot;</a><br />
                 <span className='cursor' />
               </code>
             </div>

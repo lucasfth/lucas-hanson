@@ -1,6 +1,6 @@
 import Image from 'react-bootstrap/Image'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 
 export const dhi = {
   img: '/assets/greenup.png',

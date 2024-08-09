@@ -10,8 +10,8 @@ import repolicense from './Repolicense'
 
 const projects = {
   bachelor: bachelor,
-  dhi: dhi,
   repolicense: repolicense,
+  dhi: dhi,
 }
 
 function Projects() {
